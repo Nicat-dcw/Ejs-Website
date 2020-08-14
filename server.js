@@ -8,4 +8,8 @@ router.get("/", function(req,res){
 router.get("/davet", function(req,res){
  res.redirect("https://web.kurtbot.tk/bot/add");
  //Kendinize Göre Ayarlaya Bilirsiniz
+
+//konsola mesaj verelim
+console.log("Bir kullanici Tikladi");
 }
+
