@@ -2,7 +2,7 @@ const express = require("express");
 const router = express ();
  
 router.set('view engine', 'ejs');
-
+router.use('/assets', express.static('assets'))
 router.get("/", function(req,res){
  res.render("index");
  //ejs  calistirdik
