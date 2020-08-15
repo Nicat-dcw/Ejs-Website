@@ -1,8 +1,11 @@
 const express = require("express");
 const router = express ();
+ 
+router.set('view engine', 'ejs');
 
 router.get("/", function(req,res){
- res.write("AnaSayfaya Hosgeldin");
+ res.render("index");
+ //ejs  calistirdik
 }
 // Bir Redirect Formu olusturalim
 router.get("/davet", function(req,res){
@@ -12,4 +15,10 @@ router.get("/davet", function(req,res){
 //konsola mesaj verelim
 console.log("Bir kullanici Tikladi");
 }
+
+
+//404 Sistemi
+router.use(function(req, res, next){
+res.send(404, 'Aradınız Sayfa Yok, Üzgünüm.');
+});
 
