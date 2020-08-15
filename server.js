@@ -22,3 +22,8 @@ router.use(function(req, res, next){
 res.send(404, 'Aradınız Sayfa Yok, Üzgünüm.');
 });
 
+app.listen(8080);
+// sunucu 8080 portunda acilcak
+// meselan localhost kullaniyorsaniz
+// http://localhost:8080
+// bu port default portdur
