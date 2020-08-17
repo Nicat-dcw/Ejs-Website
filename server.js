@@ -6,7 +6,7 @@ router.use('/assets', express.static('assets'))
 router.get("/", function(req,res){
  res.render("index");
  //ejs  calistirdik
-}
+});
 // Bir Redirect Formu olusturalim
 router.get("/davet", function(req,res){
  res.redirect("https://web.kurtbot.tk/bot/add");
@@ -14,7 +14,7 @@ router.get("/davet", function(req,res){
 
 //konsola mesaj verelim
 console.log("Bir kullanici Tikladi");
-}
+});
 
 
 //404 Sistemi
@@ -22,7 +22,7 @@ router.use(function(req, res, next){
 res.send(404, 'Aradınız Sayfa Yok, Üzgünüm.');
 });
 
-app.listen(8080);
+router.listen(8080);
 // sunucu 8080 portunda acilcak
 // meselan localhost kullaniyorsaniz
 // http://localhost:8080
